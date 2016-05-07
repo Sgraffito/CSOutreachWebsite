@@ -1,6 +1,6 @@
 # CSOutreach Theme for WordPress
 
-This is a custom WordPress theme for Michigan Technological University's' CSOutreach site.
+This is a custom WordPress theme for Michigan Technological University's [CSOutreach](outreach.cs.mtu.edu) site.
 
 ## Post News
 If you want to post news on the CSOutreach website:  
@@ -37,7 +37,8 @@ Use CPanel to edit a theme or to upload a new theme to the site.
 5. Hover your mouse over the theme you want to use and click the *Activate* button (button will only appear when you hover your mouse over the theme name). 
 
 ## CSS Styling
-Bootstrap [https://getbootstrap.com/](https://getbootstrap.com/) is used for front-end styling. All styling is done in the style.less file. After editing style.less, the file must be compiled into css. The css file is name style.css. 
+Bootstrap [https://getbootstrap.com/](https://getbootstrap.com/) is used for front-end styling. All styling is done in the style.less file. After editing style.less, the file must be compiled into css. The css file is name style.css.   
+
 1. Install less [http://lesscss.org/](http://lesscss.org/)
 2. Compile style.less to style.css after making changes to style.less
 
