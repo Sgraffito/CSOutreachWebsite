@@ -1,0 +1,633 @@
+/*
+Theme Name: MTU_CS_Outreach_Theme
+Theme URI:
+Author:
+Author URI:
+Description: TODO
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Tags: bootstrap, _s, _strap
+
+Based on _strap [https://github.com/ptbello/_strap], a mashup of _s [https://github.com/Automattic/_s] and Bootstrap [https://github.com/twitter/bootstrap]
+*/
+
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/mixins.less";
+
+// Reset and dependencies
+@import "bootstrap/less/normalize.less";
+@import "bootstrap/less/print.less";
+@import "bootstrap/less/glyphicons.less";
+
+// Core CSS
+@import "bootstrap/less/scaffolding.less";
+@import "bootstrap/less/type.less";
+@import "bootstrap/less/code.less";
+@import "bootstrap/less/grid.less";
+@import "bootstrap/less/tables.less";
+@import "bootstrap/less/forms.less";
+@import "bootstrap/less/buttons.less";
+
+// Components
+@import "bootstrap/less/component-animations.less";
+@import "bootstrap/less/dropdowns.less";
+@import "bootstrap/less/button-groups.less";
+@import "bootstrap/less/input-groups.less";
+@import "bootstrap/less/navs.less";
+@import "bootstrap/less/navbar.less";
+@import "bootstrap/less/breadcrumbs.less";
+@import "bootstrap/less/pagination.less";
+@import "bootstrap/less/pager.less";
+@import "bootstrap/less/labels.less";
+@import "bootstrap/less/badges.less";
+@import "bootstrap/less/jumbotron.less";
+@import "bootstrap/less/thumbnails.less";
+@import "bootstrap/less/alerts.less";
+@import "bootstrap/less/progress-bars.less";
+@import "bootstrap/less/media.less";
+@import "bootstrap/less/list-group.less";
+@import "bootstrap/less/panels.less";
+@import "bootstrap/less/responsive-embed.less";
+@import "bootstrap/less/wells.less";
+@import "bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap/less/modals.less";
+@import "bootstrap/less/tooltip.less";
+@import "bootstrap/less/popovers.less";
+@import "bootstrap/less/carousel.less";
+
+// Utility classes
+@import "bootstrap/less/utilities.less";
+@import "bootstrap/less/responsive-utilities.less";
+
+
+
+// WORDPRESS COMPATIBILITY STYLES
+// ------------------
+@import "bootstrap/_strap.less";
+
+// YOUR CUSTOM STYLES
+// ------------------
+
+@brand-info: rgb(17, 17, 92);
+@brand-primary: #5EA5EB;
+@brand-secondary: #F9B621;
+@brand-grey: #B9C4CA;
+@brand-grey-dk: #8193b1;
+@brand-accent: rgb(212, 19, 22);
+@brand-white: white;
+
+body {
+  width: 100%;
+  height: 100%;
+  background: @brand-white;
+  /* Makes sure all content stays under nav-bar */
+  padding-top: 65px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Makes all images responsive */
+img {
+  max-width: 100%;
+}
+
+/* Panel */
+.panel {
+  text-align: center;
+}
+
+
+/* Remove blue border when image is clicked */
+img a {
+  outline : none;
+}
+
+/* Make all canvases responsive */
+canvas {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+/* Remove blue border when canvas is clicked */
+canvas:focus {
+  outline: 0;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+FONTS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+p {
+  font-size: 16px;
+  font-family: Georgia,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+BUTTONS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+/* Remove inner shadow from buttons */
+.btn-primary {
+  color: @brand-white;
+  background: @brand-accent;
+  //padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  // Remove border
+  background-image: none;
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  color: @brand-white;
+  background: @brand-info;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+PAGE PADDING - (not main page)
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#content {
+  padding: 20px;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+LINKS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+/* unvisited link */
+a:link {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: @brand-accent;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: @brand-accent;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+NAVIGATION BAR FOR ALL PAGES
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+.navbar {
+  padding:8px;
+}
+
+/* Nav bar styling */
+.navbar-default {
+  border-color: transparent;
+  background: @brand-info;
+  border: none;
+}
+
+/* Brand styling */
+.navbar-default .navbar-brand {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
+  color: @brand-secondary;
+  font-size: 20px;
+}
+
+/* Nav bar link styling */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: @brand-accent;
+}
+
+/*  Remove border from under navbar that
+    appears when the menu is toggled.
+    Menu appears
+    only when the screen is too small
+    to show all links in navbar.
+*/
+.navbar-default .navbar-collapse {
+  border-color: rgba(255,255,255,.02);
+}
+
+/* Text links in nav bar */
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: @brand-white;
+}
+
+// Active button in the nav-bar
+.navbar-default .navbar-nav > .active {
+  color: @brand-white;
+  background: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: @brand-accent;
+  background: transparent;
+}
+
+/* Text link hover color */
+.navbar-default .nav li a:hover {
+  outline: 0;
+  color: @brand-accent;
+}
+
+/* MENU TOGGLE */
+/*  The Menu toggle that appears when screen
+    is too small to show all text links
+    Icon is three horizontal lines stacked on
+    eachother
+*/
+/* Menu toggle icon color */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: @brand-white;
+}
+
+/* Menu toggle default background color */
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  background-color: @brand-primary;
+}
+
+/* Menu toggle selected background color */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: @brand-accent;
+}
+
+// Dropdown menu in nav-bar
+.dropdown-menu {
+  margin-top: 20px;
+  background-color: @brand-info;
+  border:0px;
+  outline:0px;
+}
+
+.dropdown-menu li > a {
+  color: white !important;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus {
+  color: @brand-white !important;
+  background: @brand-secondary;
+}
+
+// Active button in dropdown menu
+.dropdown-menu li.active > a,
+.dropdown-menu li.active > a:hover,
+.dropdown-menu li.active > a:focus {
+  background: transparent;
+  color: @brand-accent !important;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE: HEADER
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#main-header {
+  /* Full width image */
+  text-align: center;
+  width: 100%;
+  background: @brand-accent;
+  color: white !important;
+  background-attachment: scroll;
+  background-image: url("images/Summer2014WiCS.png");
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-bckground-size: cover;
+  padding-top: 2.5vw;
+  padding-bottom: 30px;
+}
+
+#main-header .header-row {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#main-header .intro-text {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+#main-header .intro-text .intro-lead-in {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 30px;
+  color: white;
+}
+
+#main-header .intro-text .intro-heading {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 200;
+  line-height: 40px;
+}
+
+#main-header .btn {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 40px;
+  color: @brand-white !important;
+
+  background: @brand-accent;
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  // Remove border
+  background-image: none;
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+#main-header .btn:hover {
+  background: @brand-info ;
+}
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE: SECTIONS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+.sections {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.sections .section-heading {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE -> SECTIONS: ABOUT
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#about {
+  //background: @brand-white;
+  background: url("images/bandwcircuitBoard.jpg") repeat;
+}
+
+#about h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
+  color: @brand-info;
+}
+
+#main-about {
+  //background: url("images/bandwcircuitBoard.jpg") repeat;
+  background: @brand-white;
+  padding: 20px;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE -> SECTIONS: EVENTS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#news {
+  background: white;
+}
+
+#news .section-heading {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
+  color: @brand-info;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+SIDE BAR -> MAIN MENU
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#news #secondary {
+  /* Make width of the menu fill the entire div */
+  width: 100%;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE -> SECTIONS: PHOTOS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#main-photos {
+  background: @brand-grey;
+  margin: 0;
+}
+
+#main-photos img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+#main-photos p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  //padding-top: 20px;
+  //padding-top: 25px;
+  //padding-bottom: 15px;
+}
+
+#main-photos p {
+  text-align: left;
+}
+
+#main-photos .btn {
+  margin-top: 50;
+  margin-bottom: 40px;
+  color: @brand-white;
+}
+
+#main-photos .content-block {
+  min-height: 0px;
+}
+
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+PAGE FOOTER
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+
+// Main footer
+.page-footer {
+  background: lighten(@brand-info, 10%);
+  text-align: left;
+  color: white;
+}
+
+// Header
+.page-footer h3 {
+  color: @brand-secondary;
+}
+
+// Paragraph
+.page-footer .sponsor-info p {
+  color: @brand-grey-dk;
+}
+
+.page-footer .logo {
+  padding: 20px;
+}
+
+// Border line between divs
+.border-between > [class*='col-']:first-child:after {
+  background: lighten(@brand-info, 40%);
+  bottom: 0;
+  content: " ";
+  right: 0;
+  position: absolute;
+  width: 3px;
+  top: 0;
+}
+
+.footer-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// Copyright text
+#footer-copywrite {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+// Footer theme name
+.page-footer-theme {
+  background: @brand-info;
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+MAIN PAGE: POSTS
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+.post {
+  padding: 15px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: @brand-secondary;
+  -webkit-box-shadow: 10px 10px 12px -7px rgba(171,164,171,1);
+  -moz-box-shadow: 10px 10px 12px -7px rgba(171,164,171,1);
+  box-shadow: 10px 10px 12px -7px rgba(171,164,171,1);
+}
+
+// Sticky post
+.sticky {
+  background: @brand-white;
+}
+
+.sticky .entry-title a {
+  background: @brand-info;
+  color: @brand-white;
+  padding: 0.25em;
+}
+
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+ABOUT PAGE
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+.about-section-heading {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.about-section-heading a {
+  color: @brand-accent;
+}
+
+.about-img img {
+  background: green;
+  min-width: 100%;
+}
+
+//.site-about {
+//  padding: 15px;
+//  margin-bottom: 30px;
+//  border-style: solid;
+//  border-width: 15px;
+//  border-color: @brand-secondary;
+//  -webkit-box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
+//  -moz-box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
+//  box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
+//}
