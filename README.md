@@ -3,7 +3,8 @@
 This is a custom theme for the CSOutreach site.
 
 ## Post News
-If you want to post news on the CSOutreach website: 
+If you want to post news on the CSOutreach website:  
+
 1. Go to [outreach.cs.mtu.edu/wp-admin](outreach.cs.mtu.edu/wp-admin) in your web-browser.
 2. Log in with your credentials. 
 3. In the side menu, click on *Posts*.
