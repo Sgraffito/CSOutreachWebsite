@@ -1,11 +1,11 @@
 # CSOutreach Theme for WordPress
 
-This is a custom WordPress theme for Michigan Technological University's [CSOutreach](outreach.cs.mtu.edu) site.
+This is a custom WordPress theme for Michigan Technological University's [CSOutreach](http://outreach.cs.mtu.edu) site.
 
 ## Post News
 If you want to post news on the CSOutreach website:  
 
-1. Go to [outreach.cs.mtu.edu/wp-admin](outreach.cs.mtu.edu/wp-admin) in your web-browser.
+1. Go to [outreach.cs.mtu.edu/wp-admin](http://outreach.cs.mtu.edu/wp-admin) in your web-browser.
 2. Log in with your credentials. 
 3. In the side menu, click on *Posts*.
 4. Click on the *Add New* button and fill out the post title and body information. 
@@ -14,14 +14,14 @@ If you want to post news on the CSOutreach website:
 ## Edit the Website's Code
 There are two ways to edit the code for the site. The first is to download the theme, make edits, and upload the new theme. Follow the instructions outlined in *Theme Installation Instructions* to download the current theme being used for the CSOutreach website. The second method is to edit the files using the WordPress admin page. To do this:  
 
-1. Go to [outreach.cs.mtu.edu/wp-admin](outreach.cs.mtu.edu/wp-admin) in your web-browser.
+1. Go to [outreach.cs.mtu.edu/wp-admin](http://outreach.cs.mtu.edu/wp-admin) in your web-browser.
 2. Log in with your credentials. 
 3. In the side menu, click on *Appearance > Editor*. Select the file you want to edit. Make changes to the file, and then click on *Update File*.
 
 ## Theme Installation Instructions for WordPress
 Use CPanel to edit a theme or to upload a new theme to the site.   
 
-1. Go to [outreach.cs.mtu.edu/cpanel](outreach.cs.mtu.edu/cpanel) in your web-browser.
+1. Go to [outreach.cs.mtu.edu/cpanel](http://outreach.cs.mtu.edu/cpanel) in your web-browser.
 2. Log in with your credentials.
 3. Click on the *File Manager* button. You will see a list of files on the right hand side of the screen.
 4. The theme is installed in a specific folder. Navigate to this folder by clicking on **www > wp_content > themes**. The folder named **cs_outreach_theme** has the theme files. You can download this folder, make edits, and upload the edited files. 
@@ -30,7 +30,7 @@ Use CPanel to edit a theme or to upload a new theme to the site.
 
 ## Activate A New Theme in WordPress
 
-1. Go to [outreach.cs.mtu.edu/wp-admin](outreach.cs.mtu.edu/wp-admin) in your web-browser.
+1. Go to [outreach.cs.mtu.edu/wp-admin](http://outreach.cs.mtu.edu/wp-admin) in your web-browser.
 2. Log in with your credentials. 
 3. In the side menu, click on *Appearance > Themes*.
 4. Your theme (that you installed using the *Theme Installation Instructions* above) should be in the list of themes available to install. If the theme is not visible, make sure that you unzipped the file after uploading to CPanel. 
