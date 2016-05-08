@@ -82,7 +82,7 @@ Based on _strap [https://github.com/ptbello/_strap], a mashup of _s [https://git
 @brand-primary: #5EA5EB;
 @brand-secondary: #F9B621;
 @brand-grey: #B9C4CA;
-@brand-grey-dk: #8193b1;
+@brand-grey-dk: #9bb1ba;
 @brand-accent: rgb(212, 19, 22);
 @brand-white: white;
 
@@ -520,7 +520,7 @@ PAGE FOOTER
 
 // Main footer
 .page-footer {
-  background: lighten(@brand-info, 10%);
+  background: @brand-info;
   text-align: left;
   color: white;
 }
@@ -541,7 +541,7 @@ PAGE FOOTER
 
 // Border line between divs
 .border-between > [class*='col-']:first-child:after {
-  background: lighten(@brand-info, 40%);
+  background: lighten(@brand-info, 10);
   bottom: 0;
   content: " ";
   right: 0;
@@ -563,7 +563,7 @@ PAGE FOOTER
 
 // Footer theme name
 .page-footer-theme {
-  background: @brand-info;
+  background: darken(@brand-info, 10);
   padding: 25px 0;
   text-align: center;
   color: white;
@@ -598,7 +598,6 @@ MAIN PAGE: POSTS
   padding: 0.25em;
 }
 
-
 /*
 ///////////////////////////////////////////
 ///////////////////////////////////////////
@@ -607,8 +606,8 @@ ABOUT PAGE
 ///////////////////////////////////////////
 */
 .about-section-heading {
-  text-align: center;
-  padding: 20px;
+  text-align: center !important;
+  //padding: 20px;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -617,17 +616,34 @@ ABOUT PAGE
 }
 
 .about-img img {
-  background: green;
+  background: @brand-accent;
   min-width: 100%;
 }
 
-//.site-about {
-//  padding: 15px;
-//  margin-bottom: 30px;
-//  border-style: solid;
-//  border-width: 15px;
-//  border-color: @brand-secondary;
-//  -webkit-box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
-//  -moz-box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
-//  box-shadow: 14px 13px 45px -9px rgba(0,0,0,0.43);
-//}
+.site-about h1 {
+  color: @brand-info;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  padding: 0px !important;
+}
+
+/*
+///////////////////////////////////////////
+///////////////////////////////////////////
+Individual pages
+///////////////////////////////////////////
+///////////////////////////////////////////
+*/
+#primary h1 {
+  padding: 20px 0 20px 0;
+  font-family: 'Press Start 2P', cursive;
+  //text-align: left;
+  color: @brand-info;
+}
+
+#primary h3 {
+  color: darken(@brand-secondary, 5);
+}
+
+#primary h4 {
+  color: @brand-info;
+}
